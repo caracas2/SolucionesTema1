@@ -160,7 +160,10 @@ e.  Determina las diferencia entre los animales que no aparecen en ambos conjunt
 
 ```{r}
 
+qqPlot(log(A$brain))
+qqPlot(log(B$brain))
 
+#Ambos conjuntos presentan comportamientos similares y podemos afirmar, observando la gráfica, que sí siguen la distribución gaussiana.
 ```
 
 3.  La función **library** sin argumentos abre una ventana y muestra las librerías que han sido instaladas.
