@@ -194,29 +194,27 @@ qqPlot(log(B$brain))
 
 ```{r}
 
+C <- cabbages
+summarise(C)
+dim(C)
+head(C)
+tail(C)
+str(C)
 
+#is.na(cabbages)
+#Mediante el uso de any obtendremos solo un booleano.
+any(is.na(C))
 
+D <- Chile
+summarise(D)
+dim(D)
+head(D)
+tail(D)
+str(D)
+any(is.na(D))
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+summary(C)
+summary(D)
 
 
 
