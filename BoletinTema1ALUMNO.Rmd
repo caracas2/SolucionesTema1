@@ -36,7 +36,8 @@ language:
     remark: 'Nota: '
     solution: 'Solución. '
 ---
----
+
+------------------------------------------------------------------------
 
 ```{r setup, cache = F, echo = F, message = F, warning = F, tidy = F,}
 
@@ -122,8 +123,11 @@ d.  Usa la función **intersect** y almacena en la variable *commonAnimals* los 
 
 ```{r}
 
+commonAnimals <- intersect(A, B)
 
+commonAnimals
 
+rownames(commonAnimals)
 
 
 
