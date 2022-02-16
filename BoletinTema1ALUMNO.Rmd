@@ -137,9 +137,11 @@ e.  Usa **setdiff** para averiguar qué animales no están en ambos conjuntos. �
 
 ```{r}
 
+setdiff(rownames(A), rownames(B))
 
+setdiff(rownames(B), rownames(A))
 
-
+#Hay 11 animales distintos, 8 de ellos se encuentran en mammels y en Animals2 pero esto es debido a que están escritos de forma diferente en ambos conjuntos y los otros 3, que se encuentran en Animals2 son dinosaurios.
 
 
 ```
