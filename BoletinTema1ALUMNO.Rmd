@@ -174,14 +174,14 @@ qqPlot(log(B$brain))
 
     ```{r}
 
+    libReturn <- library()
+    libReturn
 
+    libReturn[[2]] [1:5]
+    head(libReturn$results, n=5)
 
-
-
-
-
-
-
+    length(libReturn$results)/3
+    #También se podría usar head(libReturns), aunque no daría directamente el nº de librerías.
 
     ```
 
