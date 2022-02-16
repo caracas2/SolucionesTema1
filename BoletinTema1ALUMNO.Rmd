@@ -151,14 +151,7 @@ e.  Determina las diferencia entre los animales que no aparecen en ambos conjunt
 ```{r}
 
 
-
-
-
-
-
-
-
-
+#Hay 11 animales distintos, 8 de ellos se encuentran en mammels y en Animals2 pero esto es debido a que están escritos de forma diferente en ambos conjuntos y los otros 3, que se encuentran en Animals2 son dinosaurios.
 
 
 ```
