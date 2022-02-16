@@ -231,9 +231,14 @@ qqPlot(cabbages$VitC)
 6.  Una representación habitual, para determinar la distribución de los datos de una variable cuantitativa es el histograma (**hist**). Determina, de forma aproximada, utilizando el histograma, si hay diferencias entre los contenidos de vitamina C (**VitC**), para las diferentes variedades de calabaza (variable **Cult**), en el conjunto de datos **cabbages**.
 
 ```{r}
+#Podemos crear el histograma mediante la función ggplot(al haber dos variables será más fácil mediante este comando).
 
+library(ggplot2)
 
+ggplot(data.frame(cabbages), aes(VitC, fill=Cult)) + 
+       geom_histogram(color = "black")
 
+#Como se observa en el histograma, la variedad c39 presenta, en general, menos cantidad de Vitamina C que la variedad c52 de calabazas.
 ```
 
 7.  Un modelo sencillo para relacionar variables es la *predicción lineal*. En el siguiente ejemplo se utiliza el conjunto de datos **whiteside**, de la librería **MASS**. Esta aproximación propone un modelo que predice una variable a partir de otra. Una primera etapa para plantear esta aproximación sería representar ambas variables mediante un diagrama de dispersión (Gráfico XY) y determinar si la relación entre variables "parece" lineal. Si es así, podemos plantear un modelo lineal (en este caso según un factor), donde se aprecia claramente que existe una relación lineal entre las dos variables consideradas. Observa y ejecuta el siguiente código.
@@ -242,7 +247,7 @@ qqPlot(cabbages$VitC)
 #Diagrama de dispersión global.
 plot(whiteside$Temp, whiteside$Gas)
 #Diagrama de dispersión etiquetando según un factor.
-plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside\$Insul])
+plot(whiteside$Temp, whiteside$Gas, pch=c(6,16)[whiteside$Insul])
 legend(x="topright",legend=c("Insul = Before","Insul = After"), pch=c(6,16))
 # Planteamos 2 modelos lineales, uno para los datos de cada factor
 Model1 <- lm(Gas ~ Temp, data = whiteside, subset = which(Insul == "Before"))
@@ -253,16 +258,6 @@ abline(Model2)
 ```
 
 ```{r,echo=T,include=T,eval=F}
-
-
-
-
-
-
-
-
-
-
 
 
 ```
